@@ -11,6 +11,5 @@ extension String {
     func capitalizeFirstLetter() -> String {
         // возвращает первую букву заглавной и остальные строчной
         return self.prefix(1).uppercased() + self.lowercased().dropFirst()
-        
     }
 }
