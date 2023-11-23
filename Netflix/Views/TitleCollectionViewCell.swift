@@ -32,7 +32,7 @@ class TitleCollectionViewCell: UICollectionViewCell {
         posterImageView.frame = contentView.bounds
     }
     
-    public 		func configure(with model: String) {
+    public func configure(with model: String) {
         
         guard let url = URL(string: "https://image.tmdb.org/t/p/w500/\(model)") else {
             return
