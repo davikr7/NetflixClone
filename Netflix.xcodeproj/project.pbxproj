@@ -17,6 +17,7 @@
 		630AA26D29D4691A00F28151 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630AA26C29D4691A00F28151 /* UpcomingViewController.swift */; };
 		630AA26F29D4816E00F28151 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630AA26E29D4816E00F28151 /* SearchViewController.swift */; };
 		630AA27129D4817B00F28151 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630AA27029D4817B00F28151 /* DownloadsViewController.swift */; };
+		630F8C982C72B3CC00D6454E /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630F8C972C72B3CC00D6454E /* TitleViewModel.swift */; };
 		6361732429DB691E00924B6E /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6361732329DB691E00924B6E /* CollectionViewTableViewCell.swift */; };
 		6361E10A29DEC7CB0034DBF5 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6361E10929DEC7CB0034DBF5 /* HeroHeaderUIView.swift */; };
 		63660EC929F34D2E00837EB8 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63660EC829F34D2E00837EB8 /* APICaller.swift */; };
@@ -40,6 +41,7 @@
 		630AA26C29D4691A00F28151 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		630AA26E29D4816E00F28151 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		630AA27029D4817B00F28151 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
+		630F8C972C72B3CC00D6454E /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 		6361732329DB691E00924B6E /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		6361E10929DEC7CB0034DBF5 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		63660EC829F34D2E00837EB8 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		6361731F29DB5D9500924B6E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				630F8C972C72B3CC00D6454E /* TitleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				630AA26D29D4691A00F28151 /* UpcomingViewController.swift in Sources */,
 				63660ECB29F3EA0D00837EB8 /* Title.swift in Sources */,
 				630AA25829D465E900F28151 /* SceneDelegate.swift in Sources */,
+				630F8C982C72B3CC00D6454E /* TitleViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
