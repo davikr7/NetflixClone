@@ -43,29 +43,25 @@ class HomeViewController: UIViewController {
         
         homeFeedTable.tableHeaderView = headerView
         
-//        APICaller.shared.getMovie(with: "Trap") { result in
-//
-//        }
         
-        configureHeroHeaderView()
+//        configureHeroHeaderView()
     }
     
     
-    private func configureHeroHeaderView() {
-
-        APICaller.shared.getTrendingMovies { [weak self] result in
-            switch result {
-            case .success(let titles):
-                let selectedTitle = titles.randomElement()
-                self?.randomTrendingMovie = selectedTitle
-                self?.headerView?.configure(with: TitleViewModel(titleName: selectedTitle?.original_title ?? "", posterURL: selectedTitle?.poster_path ?? ""))
-                
-            case .failure(let erorr):
-                print(erorr.localizedDescription)
-            }
-        }
-
-    }
+//    private func configureHeroHeaderView() {
+//
+//        APICaller.shared.getTrendingMovies { [weak self] result in
+//            switch result {
+//            case .success(let titles):
+//                let selectedTitle = titles.randomElement()
+//                self?.randomTrendingMovie = selectedTitle
+//                self?.headerView?.configure(with: TitleViewModel(titleName: selectedTitle?.original_title ?? "", posterURL: selectedTitle?.poster_path ?? ""))
+//
+//            case .failure(let erorr):
+//                print(erorr.localizedDescription)
+//            }
+//        }
+//    }
     
     private func configureNavBar() {
         var image = UIImage(named: "azerbaijan_flag")
@@ -103,6 +99,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else {
                 return UITableViewCell()
             }
+        
+        cell.delegate = self
         
         switch indexPath.section {
         case Sections.TrendingMovies.rawValue:
@@ -182,5 +180,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let defaultOffset = view.safeAreaInsets.top
         let offset = scrollView.contentOffset.y + defaultOffset
         navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
+    }
+}
+
+extension HomeViewController: CollectionViewTableViewCellDelegate {
+    func CollectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel) {
+        DispatchQueue.main.async { [weak self] in
+            let vc = TitlePreviewViewController()
+            vc.configure(with: viewModel)
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
+
     }
 }
